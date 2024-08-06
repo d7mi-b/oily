@@ -1,0 +1,47 @@
+.hero {
+    background-image: url('../images/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 37.5rem;
+    position: relative;
+    padding: 3rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    color: var(--white-color);
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: radial-gradient(rgba(6, 6, 6, 0.5), rgba(6, 6, 6, 0.8));
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 5;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero .btn {
+    height: 3.2rem;
+    width: 12.5rem;
+    font-size: 1.25rem;
+    border-radius: 3px;
+}
+
+.hero .btn:hover {
+    background-color: var(--main-color);
+}

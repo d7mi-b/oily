@@ -1,0 +1,226 @@
+@font-face {
+    font-family: Lama;
+    src: url('../fonts/lama_sans/Standard/LamaSans-Regular.ttf');
+}
+
+:root {
+    --main-color: #241370;
+    --header-color: #4F2EE5;
+    --card-color: #B6B8B9;
+    --bg-color: #ECECEC;
+    --white-color: #FFF;
+    --font-color: #666769;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    font-family: Lama;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: var(--font-color);
+    background-image: linear-gradient(45deg, var(--bg-color), var(--white-color));
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+a:hover {
+    color: var(--second-color);
+}
+
+img {
+    width: 100%;
+}
+
+i {
+    line-height: 0;
+}
+
+.section {
+    padding: 1rem 5%;
+}
+
+.section > header > h2 {
+    font-size: 3rem;
+}
+
+.section > header > p {
+    font-size: 1.5rem;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+
+.logo {
+    width: 10rem;
+}
+
+.btn {
+    height: 2.5rem;
+    min-width: 10rem;
+    padding: .5rem 1.5rem;
+    background-color: var(--header-color);
+    color: #FFF333;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
+.responsive {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .responsive {
+        display: unset;
+    }
+
+    .center.responsive {
+        display: flex;
+    }
+
+    .non-responsive {
+        display: none;
+    }
+}
+
+.card {
+    background-color: var(--card-color);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    box-shadow: 0 3px 3px 3px var(--border-color);
+}
+
+.card .icon {
+    width: 4rem;
+    height: 4rem;
+    background-image: linear-gradient(-90deg, var(--main-color), var(--second-color));
+    border-radius: .25rem;
+    color: var(--white-color);
+    font-size: 2.5rem;
+}
+
+.card header h3 {
+    margin: unset;
+    font-size: 1.5rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: .1s;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 6rem;
+    padding: 1rem 5%;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar ul a {
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.navbar ul a:hover {
+    color: var(--main-color);
+}
+
+.navbar .bar {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.navbar .bar:hover {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--second-color);
+}
+
+@media (max-width: 992px) {
+    .navbar > ul > ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 1rem;
+        padding: 2rem 3rem;
+        background-color: var(--white-color);
+        border-radius: 0 0 .5rem .5rem;
+        height: 0;
+        /* display: none; */
+        opacity: 0;
+        animation-name: navbar-responsive-close;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+    }
+
+    .navbar > ul:hover > ul {
+        display: flex;
+        animation-name: navbar-responsive;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes navbar-responsive {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 15rem;
+        opacity: 1;
+    }
+}
+
+@keyframes navbar-responsive-close {
+    from {
+        height: 13rem;
+        opacity: 1;
+    }
+
+    to {
+        height: 0;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Icons -->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="./asset/styles/index.css">
+        <link rel="stylesheet" href="./asset/styles/home.css">
+
+        <title>أويـلي</title>
+    </head>
+
+    <body>
+        <!-- for the navbar -->
+        <header></header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <header>
+                <h1>أويــلي</h1>
+                <h2>لمعدات الامن والسلامة ومكافحة الحرائق</h2>
+            </header>
+
+            <section class="btn0container">
+                <a href="/pages/products" class="btn center">منتجاتنا</a>
+            </section>
+        </section>
+
+        <script type="module">
+            import Navbar from './components/navbar.js';
+
+            Navbar();
+
+            const services = [
+                {
+                    id: 1,
+                    title: "بيع المعدات البحرية",
+                    description: "مجموعة واسعة من محركات القوارب، الأدوات، والملحقات البحرية من أفضل العلامات التجارية.",
+                    icon: "fi-ts-sailboat"
+                },
+                {
+                    id: 2,
+                    title: "الاستشارات الفنية",
+                    description: "فريق من الخبراء لتقديم المشورة التقنية ومساعدتك في اختيار المعدات الأنسب لاحتياجاتك",
+                    icon: "fi-ts-employee-man-alt"
+                },
+                {
+                    id: 3,
+                    title: "خدمة العملاء",
+                    description: "دعم فني على مدار الساعة للإجابة على استفساراتك وتقديم المساعدة اللازمة في أي وقت",
+                    icon: "fi-ts-user-headset"
+                },
+            ];
+
+            const servicesContainer = document.getElementsByClassName('services-container')[0];
+
+            services.forEach(e => {
+                servicesContainer.innerHTML += `
+                    <article class="card">
+                        <section class="icon center">
+                            <i class="fi ${e.icon}"></i>
+                        </section>
+
+                        <header>
+                            <h3>${e.title}</h3>
+                        </header>
+
+                        <p>${e.description}</p>
+                    </article>
+                `;
+            })
+        </script>
+    </body>
+</html>
