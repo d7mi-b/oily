@@ -93,3 +93,87 @@
         width: 100%
     }
 }
+
+/* Services section */
+.services {
+    padding: 2rem 0;
+    background-color: #F7FAFE;
+}
+
+.services header {
+    position: relative;
+}
+
+.services header h2 {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.services > header::after,
+.services > header::before {
+    content: "";
+    display: block;
+    width: 42%;
+    height: 1px;
+    border-bottom: 1px solid #D2D6DB;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.services > header::before {
+    left: unset;
+    right: 0;
+}
+
+.services > section {
+    padding: 1rem 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.services section .service {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--main-color);
+}
+
+.services section .service .icon {
+    width: 5rem;
+    height: 5rem;
+    background-image: radial-gradient(rgba(255, 185, 185, 1), rgba(218, 32, 29, 1));
+    border-radius: 50%;
+}
+
+.services section .service .icon img {
+    width: 2.5rem;
+}
+
+@media (max-width: 992px) {
+    .services > section {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .services > header::after,
+    .services > header::before {
+        width: 35%;
+    }
+}
+
+@media (max-width: 375px) {
+    .services header::after,
+    .services header::before {
+        width: 25%;
+    }
+
+    .services > section {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+}

@@ -61,6 +61,25 @@
             </article>
         </section>
 
+        <!-- Services section -->
+        <section class="services section">
+            <header>
+                <h2>خدماتنا</h2>
+            </header>
+
+            <section id="services-container">
+                <!-- <article class="service">
+                    <section class="icon center">
+                        <img src="./asset/icons/Frame.svg" alt="icon">
+                    </section>
+
+                    <header>
+                        <h3>نظام مضخات الحريق</h3>
+                    </header>
+                </article> -->
+            </section>
+        </section>
+
         <script type="module">
             import Navbar from './components/navbar.js';
 
@@ -69,38 +88,63 @@
             const services = [
                 {
                     id: 1,
-                    title: "بيع المعدات البحرية",
-                    description: "مجموعة واسعة من محركات القوارب، الأدوات، والملحقات البحرية من أفضل العلامات التجارية.",
-                    icon: "fi-ts-sailboat"
+                    service: "نظام مضخات الحريق",
+                    img: "Frame"
                 },
                 {
                     id: 2,
-                    title: "الاستشارات الفنية",
-                    description: "فريق من الخبراء لتقديم المشورة التقنية ومساعدتك في اختيار المعدات الأنسب لاحتياجاتك",
-                    icon: "fi-ts-employee-man-alt"
+                    service: "نظام انذار الحرائق",
+                    img: "Frame-2"
                 },
                 {
                     id: 3,
-                    title: "خدمة العملاء",
-                    description: "دعم فني على مدار الساعة للإجابة على استفساراتك وتقديم المساعدة اللازمة في أي وقت",
-                    icon: "fi-ts-user-headset"
+                    service: "نظام مكافحة الحرائق",
+                    img: "Group-1"
+                },
+                {
+                    id: 4,
+                    service: "سيارة إطفاء",
+                    img: "Frame-3"
+                },
+                {
+                    id: 5,
+                    service: "السلامة البحرية",
+                    img: "Group 1875"
+                },
+                {
+                    id: 6,
+                    service: "معدات السلامة",
+                    img: "Frame-1"
+                },
+                {
+                    id: 7,
+                    service: "الحلول الهندسية",
+                    img: "Frame-4"
+                },
+                {
+                    id: 8,
+                    service: "ادوات المختبر",
+                    img: "Group 1876"
+                },
+                {
+                    id: 9,
+                    service: "نظام المراقة",
+                    img: "Group"
                 },
             ];
 
-            const servicesContainer = document.getElementsByClassName('services-container')[0];
+            const servicesContainer = document.getElementById('services-container');
 
             services.forEach(e => {
                 servicesContainer.innerHTML += `
-                    <article class="card">
+                    <article class="service" key=${e.id}>
                         <section class="icon center">
-                            <i class="fi ${e.icon}"></i>
+                            <img src="./asset/icons/${e.img}.svg" alt="icon">
                         </section>
 
                         <header>
-                            <h3>${e.title}</h3>
+                            <h3>${e.service}</h3>
                         </header>
-
-                        <p>${e.description}</p>
                     </article>
                 `;
             })
