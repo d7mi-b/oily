@@ -44,7 +44,7 @@
 
 /* About section */
 .about {
-    padding: 4rem 5%;
+    padding: 5rem 5%;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
@@ -77,6 +77,53 @@
 
 .about .image {
     width: 33rem;
+    position: relative;
+}
+
+.about .image img {
+    position: relative;
+    z-index: 10;
+}
+
+.about .image::after,
+.about .image::before {
+    content: "";
+    width: 92.5px;
+    height: 158.28px;
+    display: block;
+    background-image: url('../images/Layer_1.png');
+    background-size: cover;
+    position: absolute;
+    animation-name: opacity;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.about .image::before {
+    top: -2rem;
+    right: -1rem;
+}
+
+.about .image::after {
+    bottom: -2rem;
+    left: -1rem;
+    animation-delay: 1s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 992px) {

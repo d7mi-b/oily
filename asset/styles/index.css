@@ -173,22 +173,38 @@ i {
     color: var(--second-color);
 }
 
+.navbar .icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+.navbar .icons a {
+    color: inherit;
+}
+
+.navbar .icons a:hover {
+    color: var(--main-color);
+}
+
 @media (max-width: 992px) {
     .navbar > ul > ul {
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: absolute;
         top: 1rem;
+        right: 0;
         padding: 2rem 3rem;
         background-color: var(--white-color);
         border-radius: 0 0 .5rem .5rem;
         height: 0;
-        /* display: none; */
+        display: none;
         opacity: 0;
         animation-name: navbar-responsive-close;
         animation-duration: .4s;
         animation-fill-mode: forwards;
+        z-index: 20;
     }
 
     .navbar > ul:hover > ul {

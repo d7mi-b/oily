@@ -18,16 +18,19 @@ const Navbar = () => {
                         <a href="/pages/about">من نحن؟</a>
                     </li>
                     <li>
-                        <a href="/#services">الخدمات</a>
+                        <a href="/pages/products">منتجاتنا</a>
                     </li>
                     <li>
-                        <a href="/pages/products">المنتجات</a>
+                        <a href="/pages/contact">تواصل معنا</a>
                     </li>
                 </ul>
             </ul>
 
-            <section>
-                
+            <section class="icons">
+                <a href="/"><i class="fi fi-brands-instagram"></i></a>
+                <a href="/"><i class="fi fi-brands-youtube"></i></a>
+                <a href="/"><i class="fi fi-brands-twitter-alt-circle"></i></a>
+                <a href="/"><i class="fi fi-brands-facebook"></i></a>
             </section>
         </nav>
     `;
