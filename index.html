@@ -6,6 +6,7 @@
 
         <!-- Icons -->
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-brands/css/uicons-brands.css'>
 
         <!-- Style -->
         <link rel="stylesheet" href="./asset/styles/index.css">
@@ -80,74 +81,141 @@
             </section>
         </section>
 
-        <script type="module">
-            import Navbar from './components/navbar.js';
+        <section class="products section">
+            <header>
+                <h2>منتجاتنا</h2>
+            </header>
 
-            Navbar();
+            <section id="products-container">
+                <!-- <article class="product">
+                    <section class="img center">
+                        <img src="./asset/images/Image.png" alt="product's image">
+                    </section>
 
-            const services = [
-                {
-                    id: 1,
-                    service: "نظام مضخات الحريق",
-                    img: "Frame"
-                },
-                {
-                    id: 2,
-                    service: "نظام انذار الحرائق",
-                    img: "Frame-2"
-                },
-                {
-                    id: 3,
-                    service: "نظام مكافحة الحرائق",
-                    img: "Group-1"
-                },
-                {
-                    id: 4,
-                    service: "سيارة إطفاء",
-                    img: "Frame-3"
-                },
-                {
-                    id: 5,
-                    service: "السلامة البحرية",
-                    img: "Group 1875"
-                },
-                {
-                    id: 6,
-                    service: "معدات السلامة",
-                    img: "Frame-1"
-                },
-                {
-                    id: 7,
-                    service: "الحلول الهندسية",
-                    img: "Frame-4"
-                },
-                {
-                    id: 8,
-                    service: "ادوات المختبر",
-                    img: "Group 1876"
-                },
-                {
-                    id: 9,
-                    service: "نظام المراقة",
-                    img: "Group"
-                },
-            ];
+                    <p>
+                        خوذة سلامة نظام أمريكي بفتحات تهوئة متوفرة بعدة الوان
+                    </p>
+                </article> -->
+            </section>
 
-            const servicesContainer = document.getElementById('services-container');
+            <section class="btn-container">
+                <a href="/pages/products" class="btn center">المزيد</a>
+            </section>
+        </section>
 
-            services.forEach(e => {
-                servicesContainer.innerHTML += `
-                    <article class="service" key=${e.id}>
+        <!-- Customers -->
+        <section class="customers section">
+            <header>
+                <h2>العملاء</h2>
+            </header>
+
+            <section id="customers-container">
+                <!-- <section class="customer center">
+                    <img src="./asset/images/Gov_Logo.png" alt="Customer's logo">
+                </section> -->
+            </section>
+
+        </section>
+
+        <footer class="footer">
+            <section>
+                <article>
+                    <header>
+                        <h1>الركن المحنرف</h1>
+                    </header>
+                    
+                    <p>أويلـي لمعدات الأمن والسلامة ومكافحة الحرائق حماية فائقة، ضمان جودة.</p>
+                    <p>في أويلـي، نقدم أحدث حلول الأمن والسلامة لمواجهة جميع التحديات الطارئة.</p>
+                </article>
+
+                <section>
+                    <header>
+                        <h1>روابط سريعة</h1>
+                    </header>
+
+                    <ul>
+                        <li><a href="/">الرئيسية</a></li>
+                        <li><a href="/#services">خدماتنا</a></li>
+                        <li><a href="/pages/products">منتجاتنا</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <header>
+                        <h1>روابط سريعة</h1>
+                    </header>
+
+                    <ul>
+                        <li><a href="/">تحميل البروفايل</a></li>
+                        <li><a href="/">سياسة الخدمة</a></li>
+                        <li><a href="/">الشروط والأحكام</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <article>
                         <section class="icon center">
-                            <img src="./asset/icons/${e.img}.svg" alt="icon">
+                            <i class="fi fi-ts-marker"></i>
                         </section>
 
-                        <header>
-                            <h3>${e.service}</h3>
-                        </header>
+                        <section>
+                            <header>
+                                <h2>مكاننا</h2>
+                            </header>
+
+                            <p>حضرموت ، المكلا</p>
+                        </section>
                     </article>
-                `;
-            })
-        </script>
+
+                    <article>
+                        <section class="icon center">
+                            <i class="fi fi-brands-whatsapp"></i>
+                        </section>
+
+                        <section>
+                            <header>
+                                <h2>واتس اب</h2>
+                            </header>
+
+                            <p dir="ltr">+96732000000</p>
+                        </section>
+                    </article>
+
+                    <article>
+                        <section class="icon center">
+                            <i class="fi fi-ts-envelope-open"></i>
+                        </section>
+
+                        <section>
+                            <header>
+                                <h2>البريد الإلكتروني</h2>
+                            </header>
+
+                            <p>info@oily.com</p>
+                        </section>
+                    </article>
+                </section>
+            </section>
+
+            <section>
+                <section class="logo center">
+                    <img src="./public/logo.png" alt="Logo">
+                </section>
+            </section>
+
+            <section>
+                <p> جميع الحقوق محفوظة  ©  2010-2024  |  اويلي لمعدات الامن والسلامة</p>
+
+                <section class="icons">
+                    <a href="/"><i class="fi fi-brands-instagram"></i></a>
+                    <a href="/"><i class="fi fi-brands-youtube"></i></a>
+                    <a href="/"><i class="fi fi-brands-twitter-alt-circle"></i></a>
+                    <a href="/"><i class="fi fi-brands-facebook"></i></a>
+                </section>
+            </section>
+        </footer>
+
+        <script type="module" src="./asset/js/index.js"></script>
+        <script src="./asset/js/products.js"></script>
     </body>
 </html>
