@@ -114,6 +114,10 @@ i {
     }
 }
 
+.cards-container {
+    margin: 2rem 0;
+}
+
 .card {
     background-color: var(--card-color);
     padding: 1.5rem;
@@ -125,9 +129,17 @@ i {
     box-shadow: 0 3px 3px 3px var(--border-color);
 }
 
-.card header h3 {
-    margin: unset;
+.card .icon {
+    width: 52px;
+    height: 52px;
+    background-color: var(--header-color);
     font-size: 1.5rem;
+    border-radius: .5rem;
+    color: var(--white-color);
+}
+
+.card header  {
+    color: var(--main-color);
 }
 
 .card:hover {
@@ -386,4 +398,47 @@ i {
         flex-direction: column-reverse;
         gap: 1.5rem;
     }
+}
+
+/* Header Page */
+.header-page {
+    height: 12.5rem;
+    background-image: url('../images/hero.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0 5%;
+    align-items: flex-start;
+}
+
+.header-page::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: radial-gradient(rgba(6, 6, 6, 0.5), rgba(6, 6, 6, 0.8));
+    z-index: 1;
+}
+
+.header-page h1 {
+    position: relative;
+    z-index: 5;
+    font-size: 2rem;
+    font-family: Lama-Semibold;
+    color: var(--white-color);
+    position: relative;
+    margin: 0 1rem;
+}
+
+.header-page h1::before {
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: var(--white-color);
+    display: block;
+    position: absolute;
+    margin: 0 -1.5rem;
 }

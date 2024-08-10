@@ -83,7 +83,7 @@ const Footer = () => {
 
         <section>
             <section class="logo center">
-                <img src="./public/logo.png" alt="Logo">
+                <img src="/public/logo.png" alt="Logo">
             </section>
         </section>
 
