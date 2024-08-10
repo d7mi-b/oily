@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Icons -->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-brands/css/uicons-brands.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="../asset/styles/index.css">
+        <link rel="stylesheet" href="../asset/styles/contact-us.css">
+
+        <title>أويـلي | تواصل معنا</title>
+    </head>
+
+    <body>
+        <!-- for the navbar -->
+        <header></header>
+
+        <!-- Header page -->
+        <section class="header-page center">
+            <h1>تواصل معنا</h1>
+        </section>
+
+        <main>
+            <form>
+                <section class="input-field">
+                    <i class="fi fi-rr-user"></i>
+                    <input type="text" name="name" placeholder="الإسم" required >
+                </section>
+
+                <section>
+                    <section class="input-field">
+                        <i class="fi fi-rr-envelope"></i>
+                        <input type="email" name="email" placeholder="البريد الإلكتروني" required >
+                    </section>
+
+                    <section class="input-field">
+                        <i class="fi fi-rr-phone-flip"></i>
+                        <input type="tel" name="phone" placeholder="رقم الجوال" required >
+                    </section>
+                </section>
+
+                <section class="input-field">
+                    <i class="fi fi-rr-pen-nib"></i>
+                    <input type="text" name="title" placeholder="الموضوع" required >
+                </section>
+
+                <section class="input-field">
+                    <i class="fi fi-rr-pen-nib"></i>
+                    <textarea name="details" placeholder="التفاصيل" required ></textarea>
+                </section>
+
+                <section class="btn-container">
+                    <button type="submit" class="btn center" name="submit">إرسال</button>
+                </section>
+            </form>
+
+            <section class="icons">
+                <article>
+                    <section class="icon center">
+                        <i class="fi fi-ts-marker"></i>
+                    </section>
+
+                    <section>
+                        <header>
+                            <h2>مكاننا</h2>
+                        </header>
+
+                        <p>حضرموت ، المكلا</p>
+                    </section>
+                </article>
+
+                <article>
+                    <section class="icon center">
+                        <i class="fi fi-brands-whatsapp"></i>
+                    </section>
+
+                    <section>
+                        <header>
+                            <h2>واتس اب</h2>
+                        </header>
+
+                        <p dir="ltr">+96732000000</p>
+                    </section>
+                </article>
+
+                <article>
+                    <section class="icon center">
+                        <i class="fi fi-ts-envelope-open"></i>
+                    </section>
+
+                    <section>
+                        <header>
+                            <h2>البريد الإلكتروني</h2>
+                        </header>
+
+                        <p>info@oily.com</p>
+                    </section>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer"></footer>
+
+        <script type="module">
+            import Navbar from '../components/navbar.js';
+            import Footer from '../components/footer.js';
+
+            Navbar();
+            Footer();
+
+            const customers = [
+                {
+                    id: 1,
+                    name: "نما",
+                    logo: "Gov_Logo-5"
+                },
+                {
+                    id: 2,
+                    name: "وزارة الصناعة والثروة المعدنية",
+                    logo: "Gov_Logo-4"
+                },
+                {
+                    id: 3,
+                    name: "اعتماد",
+                    logo: "Gov_Logo-3"
+                },
+                {
+                    id: 4,
+                    name: "سكني",
+                    logo: "Gov_Logo-2"
+                },
+                {
+                    id: 5,
+                    name: "ايجار",
+                    logo: "Gov_Logo-1"
+                },
+                {
+                    id: 6,
+                    name: "وزارة الإستثمار",
+                    logo: "Gov_Logo"
+                },
+            ];
+
+            const customersContainer = document.getElementById('customers-container');
+
+            customers.forEach(e => {
+                customersContainer.innerHTML += `
+                    <article class="card">
+                        <section class="img center">
+                            <img src="/asset/images/${e.logo}.png" alt="Customer's logo">
+                        </section>
+
+                        <p>${e.name}</p>
+                    </article>
+                `;
+            })
+        </script>
+        <script src="../asset/js/products.js"></script>
+    </body>
+</html>

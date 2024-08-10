@@ -21,7 +21,7 @@ const Navbar = () => {
                         <a href="/pages/products.html">منتجاتنا</a>
                     </li>
                     <li>
-                        <a href="/pages/contact">تواصل معنا</a>
+                        <a href="/pages/contact-us.html">تواصل معنا</a>
                     </li>
                 </ul>
             </ul>
