@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Icons -->
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-brands/css/uicons-brands.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="../asset/styles/index.css">
+        <link rel="stylesheet" href="../asset/styles/home.css">
+
+        <title>أويـلي | العملاء</title>
+    </head>
+
+    <body>
+        <!-- for the navbar -->
+        <header></header>
+
+        <!-- Header page -->
+        <section class="header-page center">
+            <h1>عملائنا</h1>
+        </section>
+
+        <section id="customers-container" class="cards-container">
+            <!-- <article class="card">
+                <section class="img center">
+                    <img src="./asset/images/Image.png" alt="product's image">
+                </section>
+
+                <p>
+                    خوذة سلامة نظام أمريكي بفتحات تهوئة متوفرة بعدة الوان
+                </p>
+            </article> -->
+        </section>
+
+        <footer class="footer"></footer>
+
+        <script type="module">
+            import Navbar from '../components/navbar.js';
+            import Footer from '../components/footer.js';
+
+            Navbar();
+            Footer();
+
+            const customers = [
+                {
+                    id: 1,
+                    name: "نما",
+                    logo: "Gov_Logo-5"
+                },
+                {
+                    id: 2,
+                    name: "وزارة الصناعة والثروة المعدنية",
+                    logo: "Gov_Logo-4"
+                },
+                {
+                    id: 3,
+                    name: "اعتماد",
+                    logo: "Gov_Logo-3"
+                },
+                {
+                    id: 4,
+                    name: "سكني",
+                    logo: "Gov_Logo-2"
+                },
+                {
+                    id: 5,
+                    name: "ايجار",
+                    logo: "Gov_Logo-1"
+                },
+                {
+                    id: 6,
+                    name: "وزارة الإستثمار",
+                    logo: "Gov_Logo"
+                },
+            ];
+
+            const customersContainer = document.getElementById('customers-container');
+
+            customers.forEach(e => {
+                customersContainer.innerHTML += `
+                    <article class="card">
+                        <section class="img center">
+                            <img src="/asset/images/${e.logo}.png" alt="Customer's logo">
+                        </section>
+
+                        <p>${e.name}</p>
+                    </article>
+                `;
+            })
+        </script>
+        <script src="../asset/js/products.js"></script>
+    </body>
+</html>

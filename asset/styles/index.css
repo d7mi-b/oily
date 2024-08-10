@@ -143,6 +143,17 @@ i {
     color: var(--white-color);
 }
 
+.card .img {
+    height: 13rem;
+    margin-bottom: 1rem;
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
 .card header  {
     color: var(--main-color);
 }
