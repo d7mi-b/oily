@@ -18,7 +18,7 @@ const Navbar = () => {
                         <a href="/pages/about.html">من نحن؟</a>
                     </li>
                     <li>
-                        <a href="/pages/products">منتجاتنا</a>
+                        <a href="/pages/products.html">منتجاتنا</a>
                     </li>
                     <li>
                         <a href="/pages/contact">تواصل معنا</a>

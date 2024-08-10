@@ -65,9 +65,9 @@ const productsContainer = document.getElementById('products-container');
 
 products.forEach(e => {
     productsContainer.innerHTML += `
-        <article class="product" key="${e.id}">
+        <article class="product card" key="${e.id}">
             <section class="img center">
-                <img src="./asset/images/${e.img}.png" alt="product's image">
+                <img src="/asset/images/${e.img}.png" alt="product's image">
             </section>
 
             <p>${e.product}</p>
