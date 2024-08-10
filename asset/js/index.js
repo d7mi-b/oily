@@ -110,3 +110,15 @@ customers.forEach(e => {
         </section>
     `;
 })
+
+const servicesContainerTopOffset = servicesContainer.offsetTop;
+
+window.addEventListener('scroll', () => {
+    const scrollOffset = window.scrollY;
+
+    if (scrollOffset + 300 > servicesContainerTopOffset) {
+        const cards = document.querySelectorAll('#services-container .service');
+
+        cards.forEach(e => e.classList.add('showing'));
+    }
+})

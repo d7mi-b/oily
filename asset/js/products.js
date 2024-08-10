@@ -73,4 +73,22 @@ products.forEach(e => {
             <p>${e.product}</p>
         </article>
     `;
+});
+
+const productsContainerTopOffset = productsContainer.offsetTop;
+
+if (productsContainerTopOffset < 500) {
+    const cards = document.querySelectorAll('#products-container .card');
+
+    cards.forEach(e => e.classList.add('showing'));
+};
+
+window.addEventListener('scroll', () => {
+    const scrollOffset = window.scrollY;
+
+    if (scrollOffset + 300 > productsContainerTopOffset) {
+        const cards = document.querySelectorAll('#products-container .card');
+
+        cards.forEach(e => e.classList.add('showing'));
+    }
 })

@@ -183,6 +183,8 @@
     align-items: center;
     gap: 1rem;
     color: var(--main-color);
+    position: relative;
+    top: 100rem;
 }
 
 .services section .service .icon {
@@ -227,7 +229,6 @@
     width: fit-content;
     margin: 0 auto;
 }
-
 
 /* Customers section */
 .customers {
