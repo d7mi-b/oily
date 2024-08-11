@@ -111,6 +111,16 @@
 
             Navbar();
             Footer();
+
+            const cardsContainer = document.querySelector('.cards-container')
+
+            const cardsContainerTopOffset = cardsContainer.offsetTop;
+
+            if (cardsContainerTopOffset < 500) {
+                const cards = document.querySelectorAll('.cards-container .card');
+
+                cards.forEach(e => e.classList.add('showing'));
+            };
         </script>
     </body>
 </html>

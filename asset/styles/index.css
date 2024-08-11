@@ -81,9 +81,16 @@ i {
     width: 10rem;
 }
 
+@media (max-width: 768px) {
+    .logo {
+        width: 6rem;
+    }
+}
+
 .btn {
     height: 2.5rem;
     min-width: 10rem;
+    margin: 0 auto;
     padding: .5rem 1.5rem;
     background-color: var(--header-color);
     color: #FFF333;
@@ -149,6 +156,14 @@ i {
     font-size: 1.5rem;
     border-radius: .5rem;
     color: var(--white-color);
+}
+
+.card .icon-red {
+    background-image: radial-gradient(rgba(255, 185, 185, 1), rgba(218, 32, 29, 1));
+}
+
+.card .icon-red img {
+    width: 2rem;
 }
 
 .card .img {
@@ -440,6 +455,7 @@ i {
     .footer > section:nth-of-type(3) {
         flex-direction: column-reverse;
         gap: 1.5rem;
+        text-align: center;
     }
 }
 

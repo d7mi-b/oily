@@ -1,6 +1,7 @@
 .hero {
     background-image: url('../images/hero.png');
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 37.5rem;
     position: relative;
@@ -137,6 +138,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .about .image {
+        width: 80%;
+    }
+}
+
 /* Section Class of Services and Products section */
 .section:not(.about.section, .customers.section) {
     padding: 4rem 0 2rem;
@@ -170,7 +177,7 @@
 }
 
 /* Services section */
-.services > section {
+.services > section:not(.services .btn-container) {
     padding: 1rem 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -198,28 +205,37 @@
     width: 2.5rem;
 }
 
+.services .btn-container {
+    margin: 1.5rem 0 1rem;
+}
+
 @media (max-width: 992px) {
-    .services > section {
+    .services > section:not(.services .btn-container) {
         grid-template-columns: repeat(2, 1fr);
         margin: 2rem auto;
     }
 }
 
 @media (max-width: 768px) {
-    .services > header::after,
-    .services > header::before {
+    .section > header::after,
+    .section > header::before {
         width: 35%;
+    }
+
+    .services > section:not(.services .btn-container) {
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin: 2rem auto;
     }
 }
 
 @media (max-width: 375px) {
-    .services header::after,
-    .services header::before {
+    .section header::after,
+    .section header::before {
         width: 25%;
     }
 
-    .services > section {
-        grid-template-columns: repeat(1, 1fr);
+    .services > section:not(.services .btn-container) {
         width: 100%;
     }
 }

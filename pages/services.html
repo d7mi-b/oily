@@ -17,7 +17,7 @@
         <!-- Style -->
         <link rel="stylesheet" href="../asset/styles/index.min.css">
 
-        <title>أويـلي | العملاء</title>
+        <title>أويـلي | الخدمات</title>
     </head>
 
     <body>
@@ -26,10 +26,10 @@
 
         <!-- Header page -->
         <section class="header-page center">
-            <h1>العملاء</h1>
+            <h1>الخدمات</h1>
         </section>
 
-        <main id="customers-container" class="cards-container">
+        <main id="services-container" class="cards-container">
             <!-- <article class="card">
                 <section class="img center">
                     <img src="./asset/images/Image.png" alt="product's image">
@@ -50,60 +50,73 @@
             Navbar();
             Footer();
 
-            const customers = [
+            const services = [
                 {
                     id: 1,
-                    name: "نما",
-                    logo: "Gov_Logo-5"
+                    service: "نظام مضخات الحريق",
+                    img: "Frame"
                 },
                 {
                     id: 2,
-                    name: "وزارة الصناعة والثروة المعدنية",
-                    logo: "Gov_Logo-4"
+                    service: "نظام انذار الحرائق",
+                    img: "Frame-2"
                 },
                 {
                     id: 3,
-                    name: "اعتماد",
-                    logo: "Gov_Logo-3"
+                    service: "نظام مكافحة الحرائق",
+                    img: "Group-1"
                 },
                 {
                     id: 4,
-                    name: "سكني",
-                    logo: "Gov_Logo-2"
+                    service: "سيارة إطفاء",
+                    img: "Frame-3"
                 },
                 {
                     id: 5,
-                    name: "ايجار",
-                    logo: "Gov_Logo-1"
+                    service: "السلامة البحرية",
+                    img: "Group 1875"
                 },
                 {
                     id: 6,
-                    name: "وزارة الإستثمار",
-                    logo: "Gov_Logo"
+                    service: "معدات السلامة",
+                    img: "Frame-1"
+                },
+                {
+                    id: 7,
+                    service: "الحلول الهندسية",
+                    img: "Frame-4"
+                },
+                {
+                    id: 8,
+                    service: "ادوات المختبر",
+                    img: "Group 1876"
+                },
+                {
+                    id: 9,
+                    service: "نظام المراقة",
+                    img: "Group"
                 },
             ];
 
-            const customersContainer = document.getElementById('customers-container');
+            const servicesContainer = document.getElementById('services-container');
 
-            customers.forEach(e => {
-                customersContainer.innerHTML += `
-                    <article class="card">
-                        <section class="img center">
-                            <img src="/asset/images/${e.logo}.png" alt="Customer's logo">
+            services.forEach(e => {
+                servicesContainer.innerHTML += `
+                    <article class="service card" key=${e.id}>
+                        <section class="icon icon-red center">
+                            <img src="/asset/icons/${e.img}.svg" alt="icon">
                         </section>
 
-                        <p>${e.name}</p>
+                        <header>
+                            <h3>${e.service}</h3>
+                        </header>
                     </article>
                 `;
             });
 
-            const customersContainerTopOffset = customersContainer.offsetTop;
+            const cards = document.querySelectorAll('#services-container .card');
 
-            if (customersContainerTopOffset < 500) {
-                const cards = document.querySelectorAll('#customers-container .card');
-
-                cards.forEach(e => e.classList.add('showing'));
-            };
+            cards.forEach(e => e.classList.add('showing'));
         </script>
         <script src="../asset/js/products.js"></script>
     </body>

@@ -34,22 +34,7 @@ const services = [
         id: 6,
         service: "معدات السلامة",
         img: "Frame-1"
-    },
-    {
-        id: 7,
-        service: "الحلول الهندسية",
-        img: "Frame-4"
-    },
-    {
-        id: 8,
-        service: "ادوات المختبر",
-        img: "Group 1876"
-    },
-    {
-        id: 9,
-        service: "نظام المراقة",
-        img: "Group"
-    },
+    }
 ];
 
 const servicesContainer = document.getElementById('services-container');
