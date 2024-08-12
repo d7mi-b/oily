@@ -16,8 +16,13 @@ body {
 }
 
 .cards-container .card {
+    padding: 1.5rem;
     width: 100%;
     box-shadow: 0 3px 3px 1px var(--border-color);
+}
+
+.cards-container .card p {
+    text-align: unset;
 }
 
 .cards-container .card:hover .icon {

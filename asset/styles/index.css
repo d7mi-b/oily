@@ -126,14 +126,13 @@ i {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
     padding: 1rem 5%;
 }
 
 .card {
     width: 20rem;
-    background-color: var(--white-color);
-    padding: 1.5rem;
+    background-color: var(--card-color);
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
@@ -141,6 +140,15 @@ i {
     box-shadow: 0 3px 5px 1px var(--border-color);
     position: relative;
     top: 100rem;
+    padding-bottom: 1.5rem;
+    border: 1px solid var(--card-color);
+}
+
+.card.service {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
 }
 
 .showing {
@@ -159,7 +167,14 @@ i {
 }
 
 .card .icon-red {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
     background-image: radial-gradient(rgba(255, 185, 185, 1), rgba(218, 32, 29, 1));
+}
+
+.card:hover .icon-red {
+    background-image: radial-gradient(rgba(218, 32, 29, 1), rgba(255, 185, 185, 1));
 }
 
 .card .icon-red img {
@@ -169,6 +184,8 @@ i {
 .card .img {
     height: 13rem;
     margin-bottom: 1rem;
+    background-color: var(--white-color);
+    padding: 1.5rem;
 }
 
 .card .img img {
@@ -184,10 +201,11 @@ i {
 .card p {
     text-align: center;
     color: #1F2A37;
+    padding: 0 1.5rem;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     transition: .1s;
 }
 

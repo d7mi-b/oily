@@ -4,6 +4,20 @@ import Footer from '../../components/footer.js';
 Navbar();
 Footer();
 
+const slider = document.getElementsByClassName('slider')[0];
+let currentSlide = 0;
+
+setInterval(() => {
+    let slides = document.querySelectorAll(".hero-slide");
+
+    slider.append(slides[0]);
+
+    slides.forEach(e => {
+        e.classList.toggle('zoom-in');
+        e.classList.toggle('zoom-out');
+    })
+}, [7000])
+
 const services = [
     {
         id: 1,
@@ -94,7 +108,19 @@ customers.forEach(e => {
             <img src="./asset/images/${e.logo}.png" alt="Customer's logo">
         </section>
     `;
-})
+});
+
+const customersContainerCards = document.querySelectorAll('#customers-container .customer');
+
+if (customersContainerCards.length > 0) {
+    customersContainerCards.forEach((card, index) => {
+        card.style.cssText = `animation-delay: -${index}s;`;
+
+        console.log(20 + index);
+    })
+}
+
+console.log(customersContainerCards);
 
 const servicesContainerTopOffset = servicesContainer.offsetTop;
 
