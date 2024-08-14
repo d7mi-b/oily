@@ -425,11 +425,11 @@ i {
     font-size: 1.5rem;
 }
 
-.footer > section:nth-of-type(3) .icons a {
+.footer a {
     color: #B6BABF;
 }
 
-.footer > section:nth-of-type(3) .icons a:hover {
+.footer a:hover {
     color: var(--header-color);
 }
 

@@ -48,7 +48,7 @@ const Footer = () => {
                             <h2>مكاننا</h2>
                         </header>
 
-                        <p>حضرموت ، المكلا</p>
+                        <p>حضرموت – المكلا – الديس – مقابل حصن الغويزي</p>
                     </section>
                 </article>
 
@@ -62,7 +62,7 @@ const Footer = () => {
                             <h2>واتس اب</h2>
                         </header>
 
-                        <p dir="ltr">+96732000000</p>
+                        <p dir="ltr"><a target="_blank" href="https://wa.me/967777326787">+967777326787</a></p>
                     </section>
                 </article>
 

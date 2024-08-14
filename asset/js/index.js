@@ -5,7 +5,6 @@ Navbar();
 Footer();
 
 const slider = document.getElementsByClassName('slider')[0];
-let currentSlide = 0;
 
 setInterval(() => {
     let slides = document.querySelectorAll(".hero-slide");
@@ -21,12 +20,12 @@ setInterval(() => {
 const services = [
     {
         id: 1,
-        service: "نظام مضخات الحريق",
+        service: "تركيب نظام مضخات الحريق ",
         img: "Frame"
     },
     {
         id: 2,
-        service: "نظام انذار الحرائق",
+        service: "تركيب نظام انذار الحرائق",
         img: "Frame-2"
     },
     {
@@ -100,27 +99,25 @@ const customers = [
     },
 ];
 
-const customersContainer = document.getElementById('customers-container');
+const customersContainers = document.querySelectorAll('.customers-container');
 
-customers.forEach(e => {
-    customersContainer.innerHTML += `
-        <section class="customer center" title="${e.name}">
-            <img src="./asset/images/${e.logo}.png" alt="Customer's logo">
-        </section>
-    `;
-});
+customersContainers.forEach((customersContainer) => {
+    customers.forEach(e => {
+        customersContainer.innerHTML += `
+            <section class="customer center" title="${e.name}">
+                <img src="./asset/images/${e.logo}.png" alt="Customer's logo">
+            </section>
+        `;
+    });
+})
 
-const customersContainerCards = document.querySelectorAll('#customers-container .customer');
+const customersContainerCards = document.querySelectorAll('.customers-container');
 
 if (customersContainerCards.length > 0) {
     customersContainerCards.forEach((card, index) => {
-        card.style.cssText = `animation-delay: -${index}s;`;
-
-        console.log(20 + index);
+        // card.style.cssText = `animation-delay: -${index}s;`;
     })
 }
-
-console.log(customersContainerCards);
 
 const servicesContainerTopOffset = servicesContainer.offsetTop;
 
