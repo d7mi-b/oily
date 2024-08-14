@@ -76,7 +76,7 @@ const Footer = () => {
                             <h2>البريد الإلكتروني</h2>
                         </header>
 
-                        <p>info@oily.com</p>
+                        <p><a href="mailto:info@oily.com">info@oily.com</a></p>
                     </section>
                 </article>
             </section>

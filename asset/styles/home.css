@@ -138,7 +138,9 @@
 }
 
 .about .image::after,
-.about .image::before {
+.about .image::before,
+.contact-us::after,
+.contact-us::before {
     content: "";
     width: 92.5px;
     height: 158.28px;
@@ -153,12 +155,14 @@
     animation-iteration-count: infinite;
 }
 
-.about .image::before {
+.about .image::before,
+.contact-us::before {
     top: -2rem;
     right: -1rem;
 }
 
-.about .image::after {
+.about .image::after,
+.contact-us::after {
     bottom: -2rem;
     left: -1rem;
     animation-delay: 1s;
@@ -304,8 +308,9 @@
 /* Customers section */
 .customers {
     background-color: var(--white-color);
-    height: 80vh;
+    height: 60vh;
     overflow: hidden;
+    margin-bottom: 0;
 }
 
 .customers > header::after,
@@ -359,18 +364,37 @@
     }
 }
 
-/* @media (max-width: 768px) {
-    .customers section .customer {
-        animation: s customer-slider-resonse infinite linear forwards;
-    }
+/* Contact us */
+.contact-us {
+    position: relative;
+    min-height: 35vh;
+    width: 90%;
+    margin: 3rem auto 4rem;
+    background-color: var(--card-color);
+    border-radius: .5rem;
+    box-shadow: 0 3px 10px 1px rgba(155, 155, 155, .5);
+    padding: 1.5rem;
+    text-align: center;
+    gap: .5rem;
 }
 
-@keyframes customer-slider-resonse {
-    from {
-        left: 200%;
-    }
+.contact-us::before {
+    z-index: -1;
+    top: -3rem;
+}
 
-    to {
-        left: -200%;
-    }
-} */
+.contact-us header {
+    color: var(--header-color);
+    font-size: 1.5rem;
+}
+
+.contact-us p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.contact-us .btn-container {
+    margin-top: 1rem;
+}
