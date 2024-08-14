@@ -346,7 +346,7 @@
     object-fit: scale-down;
 }
 
-.customers > div:hover section {
+.customers > div section:hover {
     animation-play-state: paused;
 }
 
